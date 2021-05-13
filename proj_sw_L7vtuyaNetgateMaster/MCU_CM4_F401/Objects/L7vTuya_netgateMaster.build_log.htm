@@ -1,0 +1,293 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.14.2
+Copyright (C) 2015 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Cortex-M4, nepenthesRainbow, LIC=TIVNB-21FQJ-Y80FK-Z8Q3K-XMR3I-IH95A
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Standard  Version: 5.18
+Toolchain Path:  F:\KEIL\Software\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 1 (build 61)
+Assembler:       Armasm.exe V5.06 update 1 (build 61)
+Linker/Locator:  ArmLink.exe V5.06 update 1 (build 61)
+Library Manager: ArmAr.exe V5.06 update 1 (build 61)
+Hex Converter:   FromElf.exe V5.06 update 1 (build 61)
+CPU DLL:         SARMCM3.DLL V5.18
+Dialog DLL:      DCM.DLL V1.13.6.0
+Target DLL:      Segger\JL2CM3.dll V2.99.18.0
+Dialog DLL:      TCM.DLL V1.14.8.0
+ 
+<h2>Project:</h2>
+D:\projSpace\proj_sw_L7vtuyaNetgateMaster\proj_sw_L7vtuyaNetgateMaster\MCU_CM4_F401\L7vTuya_netgateMaster.uvprojx
+Project File Date:  05/11/2021
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 1 (build 61)', folder: 'F:\KEIL\Software\ARM\ARMCC\Bin'
+Rebuild target 'Zigbee(cc2530)&WIFI(WRG1)'
+compiling usrMain.c...
+compiling dataManage.c...
+usrMain\dataManage.c(344): warning:  #177-D: variable "addr_a" was declared but never referenced
+        uint32_t addr_a = ADDR_USRAPP_DATANVS_DEF,
+usrMain\dataManage.c(476): warning:  #940-D: missing return statement at end of non-void function "STMFLASH_GetFlashSector"
+  }
+usrMain\dataManage.c(566): warning:  #177-D: variable "dp" was declared but never referenced
+        uint32_t dp[64] = {0x12345678, 0x12345678, 0x12345678, 0x12345678};
+usrMain\dataManage.c: 3 warnings, 0 errors
+compiling usrAppMethod.c...
+compiling usrManage_halHwCallbcak.c...
+compiling datsProcess_uartWifi.c...
+dataTransmission\datsProcess_uartWifi.c(342): warning:  #188-D: enumerated type mixed with another type
+                                        osStatus res = 0;
+dataTransmission\datsProcess_uartWifi.c(300): warning:  #177-D: variable "uartDataRcv_len" was declared but never referenced
+        static uint32_t uartDataRcv_len = 0;
+dataTransmission\datsProcess_uartWifi.c(1151): warning:  #188-D: enumerated type mixed with another type
+        osEvent evt = {0};
+dataTransmission\datsProcess_uartWifi.c(2172): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *"
+                                                        str2devType(&(rptr_uartWifiData->dataKernel[kWordLoc_ist + 10]), &devType);
+dataTransmission\datsProcess_uartWifi.c(2184): warning:  #225-D: the format string ends before this argument
+                                                                                                                                                                          
+AC5_2STR(devMac_temp));
+dataTransmission\datsProcess_uartWifi.c(2200): warning:  #225-D: the format string ends before this argument
+                                                                                                                                                                                  
+AC5_2STR(devRootNode_subidMac));
+dataTransmission\datsProcess_uartWifi.c(2264): warning:  #223-D: function "usrApp_wifiNwkCfg_stop" declared implicitly
+                                                                usrApp_wifiNwkCfg_stop();
+dataTransmission\datsProcess_uartWifi.c(2407): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *restrict"
+                                        sscanf(rptr_uartWifiData->dataKernel, "{\"gid\":\"%[^\"]\",\"cids\":[%[^]]", str_gid, str_cids);
+dataTransmission\datsProcess_uartWifi.c(2425): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+                                        uartWifiDataReq_paramTemp.dataKernelLen = strlen(uartWifiDataReq_paramTemp.dataKernel);
+dataTransmission\datsProcess_uartWifi.c(2445): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *restrict"
+                                        sscanf(rptr_uartWifiData->dataKernel, "{\"gid\":\"%[^\"]\",\"cids\":[%[^]]", str_gid, str_cids);
+dataTransmission\datsProcess_uartWifi.c(2463): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+                                        uartWifiDataReq_paramTemp.dataKernelLen = strlen(uartWifiDataReq_paramTemp.dataKernel);
+dataTransmission\datsProcess_uartWifi.c(2499): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+                                                                sprintf(&dpCtrlTemp[dpCtrlIndex], 
+dataTransmission\datsProcess_uartWifi.c(61): warning:  #550-D: variable "tid_wifiThread" was set but never used
+  static osThreadId tid_wifiThread = NULL;
+dataTransmission\datsProcess_uartWifi.c(63): warning:  #550-D: variable "uartObj_current" was set but never used
+  static type_uart_OBJ uartObj_current = comObj_DbugP1;
+dataTransmission\datsProcess_uartWifi.c(64): warning:  #550-D: variable "localUart_txCmpFlg" was set but never used
+  static bool localUart_txCmpFlg = false;
+dataTransmission\datsProcess_uartWifi.c: 15 warnings, 0 errors
+compiling datsProcess_uartZigbee.c...
+dataTransmission\datsProcess_uartZigbee.c(1343): warning:  #177-D: variable "dispLen" was declared but never referenced
+        const u8 dispLen = 150;
+dataTransmission\datsProcess_uartZigbee.c(1684): warning:  #188-D: enumerated type mixed with another type
+        datsAttr_ZigbTrans local_datsRX_mem = {0};
+dataTransmission\datsProcess_uartZigbee.c(1885): warning:  #550-D: variable "TXCMP_FLG" was set but never used
+                                                bool TXCMP_FLG = false;
+dataTransmission\datsProcess_uartZigbee.c(1932): warning:  #550-D: variable "TXCMP_FLG" was set but never used
+                                                        bool TXCMP_FLG           = false;
+dataTransmission\datsProcess_uartZigbee.c(2265): warning:  #550-D: variable "TXCMP_FLG" was set but never used
+                                                                                bool TXCMP_FLG = false;
+dataTransmission\datsProcess_uartZigbee.c(54): warning:  #550-D: variable "tid_zigbThread" was set but never used
+  static osThreadId tid_zigbThread = NULL;
+dataTransmission\datsProcess_uartZigbee.c(56): warning:  #550-D: variable "uartObj_current" was set but never used
+  static type_uart_OBJ uartObj_current = comObj_DbugP1;
+dataTransmission\datsProcess_uartZigbee.c(57): warning:  #550-D: variable "localUart_txCmpFlg" was set but never used
+  static bool localUart_txCmpFlg = false;
+dataTransmission\datsProcess_uartZigbee.c(61): warning:  #550-D: variable "nwkZigb_currentPANID" was set but never used
+  static uint16_t nwkZigb_currentPANID = 0;
+dataTransmission\datsProcess_uartZigbee.c(69): warning:  #177-D: variable "uartBuff_baseInsert" was declared but never referenced
+  LOCAL uint16_t uartBuff_baseInsert = 0; //
+dataTransmission\datsProcess_uartZigbee.c(70): warning:  #550-D: variable "uartBuff_baseInsertStart" was set but never used
+  LOCAL uint16_t uartBuff_baseInsertStart = 0;
+dataTransmission\datsProcess_uartZigbee.c(259): warning:  #177-D: function "zigbDev_eptRemove_BYpsy" was declared but never referenced
+  static bool zigbDev_eptRemove_BYpsy(nwkStateAttr_Zigb *pHead,u8 macAddr[DEVMAC_LEN],u8 devType){
+dataTransmission\datsProcess_uartZigbee.c(513): warning:  #177-D: function "zigb_clusterMultiSet" was declared but never referenced
+  LOCAL bool zigb_clusterMultiSet(devDatsTrans_portAttr devPort[], u8 Len){
+dataTransmission\datsProcess_uartZigbee.c(553): warning:  #177-D: function "zigB_sysTimeSet" was declared but never referenced
+  zigB_sysTimeSet(uint32_t timeStamp){
+dataTransmission\datsProcess_uartZigbee.c: 14 warnings, 0 errors
+compiling UART_dataTransfer.c...
+compiling bussiness_timerHard.c...
+compiling bussiness_timerSoft.c...
+compiling timer_Activing.c...
+compiling bspDrv_iptDevice.c...
+bspDrv_devIpt\bspDrv_iptDevice.c(216): warning:  #111-D: statement is unreachable
+                                }break;
+bspDrv_devIpt\bspDrv_iptDevice.c: 1 warning, 0 errors
+compiling bspDrv_optDevTips.c...
+bspDrv_devOpt\bspDrv_optDevTips.c(813): warning:  #186-D: pointless comparison of unsigned integer with zero
+                if(tipsStep < step_period)tipsStep ++; //
+bspDrv_devOpt\bspDrv_optDevTips.c(1007): warning:  #188-D: enumerated type mixed with another type
+                                                (beeps_en)?(
+IN_TIPS_BEEP_PIN_SET((GPIO_PinState)flipLevel)):(
+IN_TIPS_BEEP_PIN_SET(!BEEP_OPEN_LEVEL));
+bspDrv_devOpt\bspDrv_optDevTips.c(1027): warning:  #188-D: enumerated type mixed with another type
+                                
+IN_TIPS_BEEP_PIN_SET(!BEEP_OPEN_LEVEL);
+bspDrv_devOpt\bspDrv_optDevTips.c(1034): warning:  #188-D: enumerated type mixed with another type
+                                
+IN_TIPS_BEEP_PIN_SET(!BEEP_OPEN_LEVEL);
+bspDrv_devOpt\bspDrv_optDevTips.c(498): warning:  #177-D: function "tips_breath" was declared but never referenced
+  tips_breath(void){
+bspDrv_devOpt\bspDrv_optDevTips.c(542): warning:  #177-D: function "tips_fadeOut" was declared but never referenced
+  tips_fadeOut(void){
+bspDrv_devOpt\bspDrv_optDevTips.c: 6 warnings, 0 errors
+compiling bspDrv_optDevRelay.c...
+bspDrv_devOpt\bspDrv_optDevRelay.c(94): warning:  #223-D: function "tips_statusChangeToNormal" declared implicitly
+        tips_statusChangeToNormal(); //
+bspDrv_devOpt\bspDrv_optDevRelay.c(30): warning:  #550-D: variable "datsSave_Temp" was set but never used
+        stt_usrDats_privateSave datsSave_Temp = {0};
+bspDrv_devOpt\bspDrv_optDevRelay.c(101): warning:  #550-D: variable "statusTemp" was set but never used
+        u8 statusTemp = 0;
+bspDrv_devOpt\bspDrv_optDevRelay.c(152): warning:  #177-D: variable "log_Counter" was declared but never referenced
+        u16 log_Counter = 0;
+bspDrv_devOpt\bspDrv_optDevRelay.c(153): warning:  #177-D: variable "log_Period" was declared but never referenced
+        const u16 log_Period = 200;
+bspDrv_devOpt\bspDrv_optDevRelay.c: 5 warnings, 0 errors
+compiling RTX_Conf_CM.c...
+compiling USART_STM32F4xx.c...
+compiling stm32f4xx_hal.c...
+compiling stm32f4xx_hal_cortex.c...
+compiling stm32f4xx_hal_dma.c...
+compiling stm32f4xx_hal_dma_ex.c...
+compiling stm32f4xx_hal_flash.c...
+compiling stm32f4xx_hal_flash_ex.c...
+compiling stm32f4xx_hal_gpio.c...
+compiling stm32f4xx_hal_iwdg.c...
+compiling stm32f4xx_hal_pwr.c...
+compiling stm32f4xx_hal_pwr_ex.c...
+compiling stm32f4xx_hal_rcc.c...
+compiling stm32f4xx_hal_rcc_ex.c...
+compiling stm32f4xx_hal_tim.c...
+compiling stm32f4xx_hal_tim_ex.c...
+compiling stm32f4xx_hal_uart.c...
+compiling stm32f4xx_hal_usart.c...
+assembling startup_stm32f401xe.s...
+compiling system_stm32f4xx.c...
+linking...
+Program Size: Code=46284 RO-data=7092 RW-data=1068 ZI-data=77204  
+FromELF: creating hex file...
+".\Objects\L7vTuya_netgateMaster.axf" - 0 Error(s), 44 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.4.5.0.pack
+                ::CMSIS:RTOS:1.0 (API)
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: RTOS Version: 1.0
+   * Component: USART Version: 2.01
+   * Component: CORE Version: 4.3.0
+   * Component: Keil RTX Version: 4.80.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.7.0.pack
+                ::Device:STM32Cube Framework (API)
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: STM32Cube Framework Version: 
+   * Component: Startup Version: 2.4.2
+   * Component: Classic Version: 1.4.2
+   * Component: Common Version: 1.4.2
+   * Component: Cortex Version: 1.4.2
+   * Component: DMA Version: 1.4.2
+   * Component: Flash Version: 1.4.2
+   * Component: GPIO Version: 1.4.2
+   * Component: IWDG Version: 1.4.2
+   * Component: PWR Version: 1.4.2
+   * Component: RCC Version: 1.4.2
+   * Component: TIM Version: 1.4.2
+   * Component: UART Version: 1.4.2
+   * Component: USART Version: 1.4.2
+   * Component: USART Version: 2.5
+
+<h2>Collection of Component include folders:</h2>
+  D:\projSpace\proj_sw_L7vtuyaNetgateMaster\proj_sw_L7vtuyaNetgateMaster\MCU_CM4_F401\RTE
+  D:\projSpace\proj_sw_L7vtuyaNetgateMaster\proj_sw_L7vtuyaNetgateMaster\MCU_CM4_F401\RTE\Device\STM32F401CEUx
+  F:\KEIL\Software\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Driver\Include
+  F:\KEIL\Software\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include
+  F:\KEIL\Software\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\RTOS\RTX\INC
+  F:\KEIL\Software\ARM\PACK\Keil\STM32F4xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+  F:\KEIL\Software\ARM\PACK\Keil\STM32F4xx_DFP\2.7.0\Drivers\STM32F4xx_HAL_Driver\Inc
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ::CMSIS:RTOS:1.0 (API)
+
+   * Component: ::CMSIS Driver:USART:2.01 (API)
+      Include file:  CMSIS\Driver\Include\Driver_USART.h
+
+   * Component: ARM::CMSIS:CORE:4.3.0
+
+   * Component: ARM::CMSIS:RTOS:Keil RTX:4.80.0
+      Include file:  CMSIS\RTOS\RTX\INC\cmsis_os.h
+      Source file:   CMSIS\RTOS\RTX\Templates\RTX_Conf_CM.c
+      Include file:  CMSIS\RTOS\RTX\UserCodeTemplates\osObjects.h
+      Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\main.c
+      Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\MailQueue.c
+      Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\MemPool.c
+      Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\MsgQueue.c
+      Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\Mutex.c
+      Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\Semaphore.c
+      Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\Thread.c
+      Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\Timer.c
+      Source file:   CMSIS\RTOS\RTX\SRC\ARM\SVC_Table.s
+      Library file:  CMSIS\RTOS\RTX\LIB\ARM\RTX_CM4.lib
+
+   * Component: ::Device:STM32Cube Framework (API)
+
+   * Component: Keil::Device:Startup:2.4.2
+      Source file:   MDK\Device\Source\ARM\STM32F401xx_OPT.s
+      Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
+      Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f401xe.s
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
+
+   * Component: Keil::Device:STM32Cube Framework:Classic:1.4.2
+      Include file:  CMSIS\Driver\Config\RTE_Device.h
+      Include file:  MDK\Templates\Inc\stm32f4xx_hal_conf.h
+      Source file:   MDK\Templates\Src\stm32f4xx_hal_msp.c
+      Include file:  MDK\Templates\Inc\stm32f4xx_it.h
+      Source file:   MDK\Templates\Src\stm32f4xx_it.c
+      Include file:  MDK\Templates\Inc\main.h
+      Source file:   MDK\Templates\Src\main.c
+
+   * Component: Keil::Device:STM32Cube HAL:Common:1.4.2
+      Include file:  Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c
+
+   * Component: Keil::Device:STM32Cube HAL:Cortex:1.4.2
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c
+
+   * Component: Keil::Device:STM32Cube HAL:DMA:1.4.2
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.c
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.c
+
+   * Component: Keil::Device:STM32Cube HAL:Flash:1.4.2
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.c
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.c
+
+   * Component: Keil::Device:STM32Cube HAL:GPIO:1.4.2
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c
+
+   * Component: Keil::Device:STM32Cube HAL:IWDG:1.4.2
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_iwdg.c
+
+   * Component: Keil::Device:STM32Cube HAL:PWR:1.4.2
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.c
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.c
+
+   * Component: Keil::Device:STM32Cube HAL:RCC:1.4.2
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.c
+
+   * Component: Keil::Device:STM32Cube HAL:TIM:1.4.2
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.c
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.c
+
+   * Component: Keil::Device:STM32Cube HAL:UART:1.4.2
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.c
+
+   * Component: Keil::Device:STM32Cube HAL:USART:1.4.2
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_usart.c
+
+   * Component: Keil::CMSIS Driver:USART:2.5
+      Source file:   CMSIS\Driver\USART_STM32F4xx.c
+</pre>
+</body>
+</html>
